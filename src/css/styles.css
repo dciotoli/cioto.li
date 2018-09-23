@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+  margin:0px;
+}
+
+/************* Navbar Styles ************/
+nav.navbar {
+  display: flex;
+  background-color: #EEE;
+  padding: 10px;
+}
+
+nav.navbar > .nav-brand {
+  font-size: 20px;
+}
+
+nav.navbar .nav-links {
+  display: flex;
+  margin-left: auto;
+}
+
+nav.navbar .nav-item {
+  font-size: 14px;
+  padding-right:8px;
+  white-space: nowrap;
+}
+
+nav.navbar .menuIcon {
+  margin-left: auto;
+  cursor: pointer;
+  display: none;
+}
+/********** End Navbar Styles ***********/
