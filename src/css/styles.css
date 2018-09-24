@@ -5,22 +5,31 @@ body {
 
 /************* Navbar Styles ************/
 nav.navbar {
-  display: flex;
+  display: block;
   background-color: #EEE;
-  padding: 10px;
 }
 
-nav.navbar > .nav-brand {
+nav.navbar .nav-brand {
   font-size: 20px;
+}
+
+nav.navbar .nav-brand a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav.navbar .nav-brand a:hover {
+  opacity: 0.7;
 }
 
 nav.navbar .nav-links {
   display: flex;
+  font-size: 14px;
   margin-left: auto;
+  align-items: center;
 }
 
 nav.navbar .nav-item {
-  font-size: 14px;
   padding-right:8px;
   white-space: nowrap;
 }
@@ -29,5 +38,29 @@ nav.navbar .menuIcon {
   margin-left: auto;
   cursor: pointer;
   display: none;
+  align-items: center;
+}
+
+nav.navbar .nav-item > a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav.navbar .nav-links > *:hover {
+  opacity: 0.7;
+}
+
+nav.navbar .nav-links > .nav-close {
+  position: absolute;
+  margin-right:0.6em;
+  top: 0px;
+  right: 0px;
+  color: rgba(255, 255, 255, 0.75);
+  display: none;
+  cursor: pointer;
+}
+
+nav.navbar .nav-links > .nav-close:hover {
+  opacity: 0.5;
 }
 /********** End Navbar Styles ***********/

@@ -8,12 +8,16 @@ class Page extends React.PureComponent {
     this.PADDING = 20;
   }
 
+  componentDidMount() {
+    const { title } = this.props;
+    document.title = title;
+  }
+
   render() {
     const {
       wide,
       children,
       style,
-      title,
     } = this.props;
     return (
       <div
@@ -21,10 +25,10 @@ class Page extends React.PureComponent {
         style={{
           maxWidth: wide ? '100%' : `${this.MAX_WIDTH}px`,
           padding: `${this.PADDING}px`,
+          margin: 'auto',
           ...style,
         }}
       >
-        <h1>{title}</h1>
         {children}
       </div>
     );

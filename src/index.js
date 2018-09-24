@@ -5,7 +5,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import NavBar from './components/presentational/nav';
 import * as Pages from './components/pages';
 import './css/styles.css';
@@ -15,17 +15,17 @@ if (module.hot) {
 }
 
 // Create icon library
-library.add(faBars);
+library.add(faBars, faTimes);
 
 // define color schemes and other fun site vars
 // const primaryColor = '';
 // const secondaryColor = '';
 
 const pages = [
-  { path: '/', title: 'Home', component: (<Pages.Home />) },
+  { path: '/blog', title: 'Blog', component: (<Pages.Blog />) },
   { path: '/about', title: 'About', component: (<Pages.About />) },
   { path: '/projects', title: 'Projects', component: (<Pages.Projects />) },
-  { path: '/blog', title: 'Blog', component: (<Pages.Blog />) },
+  { path: '/', title: 'Home', component: (<Pages.Home />) },
 ];
 
 // Put react router at the top level

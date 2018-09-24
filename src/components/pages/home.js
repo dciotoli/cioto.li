@@ -3,6 +3,7 @@ import Page from '../presentational/page';
 
 const HomePage = () => (
   <Page title="Home">
+    <h1>Home</h1>
     hello!
   </Page>
 );
